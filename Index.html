@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SKSSF Thalayad Unit</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Noto Sans Malayalam",Arial,sans-serif;
+    background:#f6faf7;
+    color:#173b2d;
+}
+
+:root{
+    --green:#075c40;
+    --dark:#033c2b;
+    --light:#eaf5ef;
+    --gold:#d8b95b;
+    --white:#fff;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(3,60,43,.97);
+    box-shadow:0 3px 20px rgba(0,0,0,.15);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    height:75px;
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+}
+
+.logo-circle{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:white;
+    color:var(--green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    font-weight:800;
+}
+
+.logo h2{
+    font-size:18px;
+}
+
+.logo small{
+    font-size:10px;
+    opacity:.8;
+}
+
+nav{
+    display:flex;
+    gap:22px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    padding:120px 20px 70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(rgba(0,55,39,.78),rgba(0,30,20,.86)),
+    url("https://images.unsplash.com/photo-1564121211835-e88c852648ab?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero-label{
+    color:#e4ca6c;
+    font-weight:700;
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:clamp(40px,7vw,75px);
+    margin:15px 0;
+    font-weight:800;
+}
+
+.hero h2{
+    font-size:clamp(20px,3vw,31px);
+    font-weight:500;
+}
+
+.hero p{
+    max-width:650px;
+    margin:20px auto;
+    opacity:.9;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 27px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.btn-main{
+    background:var(--gold);
+    color:#12382b;
+}
+
+.btn-outline{
+    border:1px solid white;
+    color:white;
+}
+
+/* COMMON */
+
+section{
+    padding:85px 20px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title span{
+    color:#aa8a28;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.title h2{
+    color:var(--green);
+    font-size:35px;
+    margin-top:5px;
+}
+
+.title p{
+    max-width:650px;
+    margin:10px auto;
+    color:#697871;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-img{
+    height:400px;
+    border-radius:22px;
+
+    background:
+    linear-gradient(rgba(0,70,47,.15),rgba(0,70,47,.15)),
+    url("https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1000&q=85")
+    center/cover;
+}
+
+.about-text h3{
+    color:var(--green);
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.about-text p{
+    color:#65736d;
+    margin-bottom:12px;
+}
+
+/* NEWS */
+
+.news{
+    background:#edf6f1;
+}
+
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.news-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 25px rgba(0,0,0,.06);
+}
+
+.news-img{
+    height:190px;
+    background:#dceae3;
+}
+
+.news-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.news-content{
+    padding:22px;
+}
+
+.news-content small{
+    color:#a38425;
+}
+
+.news-content h3{
+    color:var(--green);
+    margin:7px 0;
+}
+
+.news-content p{
+    color:#707b76;
+    font-size:14px;
+}
+
+/* ACTIVITIES */
+
+.activity-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.activity{
+    background:white;
+    padding:28px;
+    border-radius:18px;
+    box-shadow:0 5px 22px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.activity:hover{
+    transform:translateY(-7px);
+}
+
+.activity-icon{
+    width:55px;
+    height:55px;
+    background:var(--light);
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.activity h3{
+    color:var(--green);
+    margin-bottom:7px;
+}
+
+.activity p{
+    color:#6e7974;
+    font-size:14px;
+}
+
+/* EVENTS */
+
+.events{
+    background:#edf6f1;
+}
+
+.event{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:white;
+    padding:20px;
+    border-radius:16px;
+    margin-bottom:15px;
+    box-shadow:0 3px 15px rgba(0,0,0,.05);
+}
+
+.date{
+    min-width:70px;
+    height:70px;
+    border-radius:13px;
+    background:var(--green);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-weight:800;
+}
+
+.event h3{
+    color:var(--green);
+}
+
+.event p{
+    color:#727b77;
+    font-size:13px;
+}
+
+/* COMMITTEE */
+
+.committee-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.member{
+    text-align:center;
+    background:white;
+    padding:25px 15px;
+    border-radius:18px;
+    box-shadow:0 4px 20px rgba(0,0,0,.06);
+}
+
+.member-photo{
+    width:125px;
+    height:125px;
+    border-radius:50%;
+    margin:auto;
+    background:#e1eee7;
+    overflow:hidden;
+}
+
+.member-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.member h3{
+    color:var(--green);
+    margin-top:15px;
+    font-size:17px;
+}
+
+.member p{
+    color:#777;
+    font-size:13px;
+}
+
+/* GALLERY */
+
+.gallery{
+    background:#f1f7f4;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.03);
+}
+
+/* VIDEO */
+
+.video-box{
+    max-width:800px;
+    margin:auto;
+    aspect-ratio:16/9;
+    border-radius:20px;
+    overflow:hidden;
+    background:#063e2d;
+}
+
+.video-box iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* DOWNLOAD */
+
+.download-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.download{
+    background:white;
+    padding:25px;
+    border-radius:17px;
+    box-shadow:0 4px 20px rgba(0,0,0,.06);
+}
+
+.download h3{
+    color:var(--green);
+}
+
+.download a{
+    display:inline-block;
+    margin-top:12px;
+    color:#a18120;
+    font-weight:700;
+    text-decoration:none;
+}
+
+/* CONTACT */
+
+.contact{
+    background:var(--dark);
+    color:white;
+}
+
+.contact .title h2{
+    color:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-box{
+    text-align:center;
+    padding:28px;
+    background:rgba(255,255,255,.07);
+    border-radius:17px;
+}
+
+.contact-box .icon{
+    font-size:27px;
+}
+
+.contact-box h3{
+    color:#e4ca6c;
+    margin:7px 0;
+}
+
+.contact-box p{
+    font-size:14px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25d366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    z-index:999;
+}
+
+/* FOOTER */
+
+footer{
+    background:#02271c;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+    font-size:13px;
+}
+
+footer span{
+    color:#d8b95b;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    nav{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:var(--dark);
+        flex-direction:column;
+        padding:20px;
+        text-align:center;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .news-grid,
+    .activity-grid,
+    .download-grid{
+        grid-template-columns:1fr;
+    }
+
+    .committee-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-img{
+        height:300px;
+    }
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    section{
+        padding:65px 15px;
+    }
+
+    .committee-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid img{
+        height:170px;
+    }
+
+    .event{
+        align-items:flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<div class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-circle">
+            SKSSF
+        </div>
+
+        <div>
+            <h2>SKSSF Thalayad</h2>
+            <small>Unit Committee</small>
+        </div>
+
+    </div>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#activities">Activities</a>
+        <a href="#events">Events</a>
+        <a href="#committee">Committee</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+    <div class="hero-label">
+        SKSSF • THALAYAD UNIT
+    </div>
+
+    <h1>SKSSF Thalayad Unit</h1>
+
+    <h2>അറിവ് • ആത്മീയത • സേവനം</h2>
+
+    <p>
+        വിദ്യാർത്ഥികളുടെ ധാർമ്മികവും വിദ്യാഭ്യാസപരവും
+        സാമൂഹികവുമായ വളർച്ചയ്ക്കായി ഒരുമിച്ച് പ്രവർത്തിക്കുന്ന
+        തലയാട് യൂണിറ്റ്.
+    </p>
+
+    <div class="buttons">
+
+        <a href="#about" class="btn btn-main">
+            ഞങ്ങളെക്കുറിച്ച്
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+            ബന്ധപ്പെടുക
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="title">
+    <span>ABOUT US</span>
+    <h2>തലയാട് യൂണിറ്റ്</h2>
+    <p>
+        നന്മയുടെയും അറിവിന്റെയും സേവനത്തിന്റെയും വഴിയിൽ
+        വിദ്യാർത്ഥികളെ ഒന്നിപ്പിക്കുന്ന കൂട്ടായ്മ.
+    </p>
+</div>
+
+<div class="about-grid">
+
+    <div class="about-img"></div>
+
+    <div class="about-text">
+
+        <h3>ഞങ്ങളുടെ ലക്ഷ്യം</h3>
+
+        <p>
+            വിദ്യാർത്ഥികളുടെ കഴിവുകൾ വികസിപ്പിക്കുകയും
+            ധാർമ്മിക മൂല്യങ്ങളും സാമൂഹിക ബോധവും
+            ശക്തിപ്പെടുത്തുകയും ചെയ്യുക.
+        </p>
+
+        <p>
+            വിദ്യാഭ്യാസം, സാമൂഹ്യ സേവനം, കലാ-സാംസ്കാരിക
+            പ്രവർത്തനങ്ങൾ, വിദ്യാർത്ഥി സംഗമങ്ങൾ തുടങ്ങിയ
+            വിവിധ മേഖലകളിൽ പ്രവർത്തിക്കുന്നു.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- NEWS -->
+
+<section class="news" id="news">
+
+<div class="container">
+
+<div class="title">
+    <span>LATEST UPDATES</span>
+    <h2>പുതിയ അറിയിപ്പുകൾ</h2>
+</div>
+
+<div class="news-grid">
+
+    <div class="news-card">
+
+        <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80">
+        </div>
+
+        <div class="news-content">
+            <small>Latest</small>
+            <h3>യൂണിറ്റ് സംഗമം</h3>
+            <p>
+                വിദ്യാർത്ഥികൾക്കായി പ്രത്യേക യൂണിറ്റ് സംഗമം.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="news-card">
+
+        <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80">
+        </div>
+
+        <div class="news-content">
+            <small>Announcement</small>
+            <h3>വിദ്യാർത്ഥി പ്രവർത്തനം</h3>
+            <p>
+                പുതിയ പ്രവർത്തനങ്ങളുടെ വിവരങ്ങൾ ഇവിടെ ലഭിക്കും.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="news-card">
+
+        <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=80">
+        </div>
+
+        <div class="news-content">
+            <small>Activity</small>
+            <h3>സേവന പ്രവർത്തനം</h3>
+            <p>
+                സമൂഹ സേവന പ്രവർത്തനങ്ങളിൽ യൂണിറ്റ് സജീവം.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ACTIVITIES -->
+
+<section id="activities">
+
+<div class="container">
+
+<div class="title">
+    <span>OUR ACTIVITIES</span>
+    <h2>പ്രവർത്തനങ്ങൾ</h2>
+</div>
+
+<div class="activity-grid">
+
+    <div class="activity">
+        <div class="activity-icon">📚</div>
+        <h3>വിദ്യാഭ്യാസം</h3>
+        <p>
+            വിദ്യാർത്ഥികളുടെ പഠന നിലവാരം മെച്ചപ്പെടുത്തുന്നതിനുള്ള
+            വിവിധ പരിപാടികൾ.
+        </p>
+    </div>
+
+    <div class="activity">
+        <div class="activity-icon">🤝</div>
+        <h3>സാമൂഹ്യ സേവനം</h3>
+        <p>
+            സമൂഹത്തിന്റെ ആവശ്യങ്ങളിൽ സഹായവും സേവനവും.
+        </p>
+    </div>
+
+    <div class="activity">
+        <div class="activity-icon">🎓</div>
+        <h3>വിദ്യാർത്ഥി കൂട്ടായ്മ</h3>
+        <p>
+            വിദ്യാർത്ഥികളെ ഒരുമിപ്പിച്ച് നേതൃത്വ ശേഷി വളർത്തുന്നു.
+        </p>
+    </div>
+
+    <div class="activity">
+        <div class="activity-icon">🎨</div>
+        <h3>കലാ സാംസ്കാരികം</h3>
+        <p>
+            കലാ-സാഹിത്യ കഴിവുകൾ പ്രോത്സാഹിപ്പിക്കുന്നു.
+        </p>
+    </div>
+
+    <div class="activity">
+        <div class="activity-icon">🕌</div>
+        <h3>ധാർമ്മിക പ്രവർത്തനം</h3>
+        <p>
+            ധാർമ്മിക മൂല്യങ്ങളും നല്ല ജീവിത രീതികളും വളർത്തുന്നു.
+        </p>
+    </div>
+
+    <div class="activity">
+        <div class="activity-icon">🌱</div>
+        <h3>യുവജന പ്രവർത്തനം</h3>
+        <p>
+            യുവാക്കളുടെ കഴിവുകളും നേതൃത്വ ശേഷിയും വികസിപ്പിക്കുന്നു.
+        </p>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- EVENTS -->
+
+<section class="events" id="events">
+
+<div class="container">
+
+<div class="title">
+    <span>UPCOMING EVENTS</span>
+    <h2>വരാനിരിക്കുന്ന പരിപാടികൾ</h2>
+</div>
+
+<div class="event">
+
+    <div class="date">
+        <strong>01</strong>
+        <small>OCT</small>
+    </div>
+
+    <div>
+        <h3>യൂണിറ്റ് മീറ്റിംഗ്</h3>
+        <p>
+            സ്ഥലം: തലയാട് | സമയം: വൈകുന്നേരം 7:00
+        </p>
+    </div>
+
+</div>
+
+
+<div class="event">
+
+    <div class="date">
+        <strong>15</strong>
+        <small>OCT</small>
+    </div>
+
+    <div>
+        <h3>വിദ്യാർത്ഥി സംഗമം</h3>
+        <p>
+            വിദ്യാർത്ഥികൾക്കായുള്ള പ്രത്യേക പരിപാടി
+        </p>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- COMMITTEE -->
+
+<section id="committee">
+
+<div class="container">
+
+<div class="title">
+    <span>EXECUTIVE COMMITTEE</span>
+    <h2>എക്സിക്യൂട്ടീവ് കമ്മിറ്റി</h2>
+    <p>2026 – 2027</p>
+</div>
+
+<div class="committee-grid">
+
+    <div class="member">
+        <div class="member-photo">
+            <img src="https://via.placeholder.com/300">
+        </div>
+        <h3>പേര് ഇവിടെ</h3>
+        <p>President</p>
+    </div>
+
+    <div class="member">
+        <div class="member-photo">
+            <img src="https://via.placeholder.com/300">
+        </div>
+        <h3>പേര് ഇവിടെ</h3>
+        <p>General Secretary</p>
+    </div>
+
+    <div class="member">
+        <div class="member-photo">
+            <img src="https://via.placeholder.com/300">
+        </div>
+        <h3>പേര് ഇവിടെ</h3>
+        <p>Treasurer</p>
+    </div>
+
+    <div class="member">
+        <div class="member-photo">
+            <img src="https://via.placeholder.com/300">
+        </div>
+        <h3>പേര് ഇവിടെ</h3>
+        <p>Secretary</p>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+<div class="container">
+
+<div class="title">
+    <span>PHOTO GALLERY</span>
+    <h2>ഫോട്ടോ ഗാലറി</h2>
+</div>
+
+<div class="gallery-grid">
+
+    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=85">
+
+    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=85">
+
+    <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=900&q=85">
+
+    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=85">
+
+    <img src="https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=900&q=85">
+
+    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+</div>
+</section>
+
+
+<!-- VIDEO -->
+
+<section>
+
+<div class="container">
+
+<div class="title">
+    <span>VIDEOS</span>
+    <h2>ഞങ്ങളുടെ വീഡിയോകൾ</h2>
+</div>
+
+<div class="video-box">
+
+    <!-- Replace YOUR_VIDEO_ID -->
+
+    <iframe
+        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+        allowfullscreen>
+    </iframe>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- DOWNLOADS -->
+
+<section id="downloads">
+
+<div class="container">
+
+<div class="title">
+    <span>DOWNLOADS</span>
+    <h2>ഡൗൺലോഡുകൾ</h2>
+</div>
+
+<div class="download-grid">
+
+    <div class="download">
+        <h3>📄 Unit Notice</h3>
+        <p>യൂണിറ്റ് അറിയിപ്പ്</p>
+        <a href="#" download>Download →</a>
+    </div>
+
+    <div class="download">
+        <h3>📄 Committee List</h3>
+        <p>2026–27 കമ്മിറ്റി</p>
+        <a href="#" download>Download →</a>
+    </div>
+
+    <div class="download">
+        <h3>📄 Application</h3>
+        <p>അപേക്ഷാ ഫോം</p>
+        <a href="#" download>Download →</a>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="title">
+    <span>CONTACT US</span>
+    <h2>ബന്ധപ്പെടുക</h2>
+</div>
+
+<div class="contact-grid">
+
+    <div class="contact-box">
+        <div class="icon">📍</div>
+        <h3>Address</h3>
+        <p>Thalayad, Kerala</p>
+    </div>
+
+    <div class="contact-box">
+        <div class="icon">📞</div>
+        <h3>Phone</h3>
+        <p>+91 XXXXX XXXXX</p>
+    </div>
+
+    <div class="contact-box">
+        <div class="icon">✉️</div>
+        <h3>Email</h3>
+        <p>skssfthalayad@gmail.com</p>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/91XXXXXXXXXX"
+target="_blank">
+💬
+</a>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 <span>SKSSF Thalayad Unit</span>.
+All Rights Reserved.
+</p>
+
+<p>
+Designed by <span>SR CREATIVE</span>
+</p>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("nav")
+    .classList
+    .toggle("active");
+
+}
+
+document.querySelectorAll("nav a").forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("nav")
+        .classList
+        .remove("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
