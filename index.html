@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -104,6 +105,7 @@ nav a:hover{
     cursor:pointer;
 }
 
+
 /* HERO */
 
 .hero{
@@ -175,6 +177,7 @@ nav a:hover{
     color:white;
 }
 
+
 /* COMMON */
 
 section{
@@ -210,6 +213,7 @@ section{
     color:#697871;
 }
 
+
 /* ABOUT */
 
 .about{
@@ -243,6 +247,7 @@ section{
     color:#65736d;
     margin-bottom:12px;
 }
+
 
 /* NEWS */
 
@@ -292,6 +297,7 @@ section{
     font-size:14px;
 }
 
+
 /* ACTIVITIES */
 
 .activity-grid{
@@ -334,6 +340,7 @@ section{
     font-size:14px;
 }
 
+
 /* EVENTS */
 
 .events{
@@ -373,7 +380,21 @@ section{
     font-size:13px;
 }
 
+
+/* ============================= */
 /* COMMITTEE */
+/* ============================= */
+
+#committee{
+    background:#f6faf7;
+}
+
+.committee-category{
+    color:var(--green);
+    text-align:center;
+    font-size:23px;
+    margin:45px 0 22px;
+}
 
 .committee-grid{
     display:grid;
@@ -387,6 +408,13 @@ section{
     padding:25px 15px;
     border-radius:18px;
     box-shadow:0 4px 20px rgba(0,0,0,.06);
+    border:1px solid #e4eee9;
+    transition:.3s;
+}
+
+.member:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 28px rgba(0,0,0,.12);
 }
 
 .member-photo{
@@ -396,6 +424,7 @@ section{
     margin:auto;
     background:#e1eee7;
     overflow:hidden;
+    border:4px solid #e3f1ea;
 }
 
 .member-photo img{
@@ -413,7 +442,9 @@ section{
 .member p{
     color:#777;
     font-size:13px;
+    margin-top:5px;
 }
+
 
 /* GALLERY */
 
@@ -439,6 +470,7 @@ section{
     transform:scale(1.03);
 }
 
+
 /* VIDEO */
 
 .video-box{
@@ -455,6 +487,7 @@ section{
     height:100%;
     border:0;
 }
+
 
 /* DOWNLOAD */
 
@@ -482,6 +515,7 @@ section{
     font-weight:700;
     text-decoration:none;
 }
+
 
 /* CONTACT */
 
@@ -520,6 +554,7 @@ section{
     font-size:14px;
 }
 
+
 /* WHATSAPP */
 
 .whatsapp{
@@ -540,6 +575,7 @@ section{
     z-index:999;
 }
 
+
 /* FOOTER */
 
 footer{
@@ -553,6 +589,7 @@ footer{
 footer span{
     color:#d8b95b;
 }
+
 
 /* MOBILE */
 
@@ -605,6 +642,7 @@ footer span{
     }
 }
 
+
 @media(max-width:500px){
 
     .hero h1{
@@ -617,6 +655,24 @@ footer span{
 
     .committee-grid{
         grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .member{
+        padding:18px 8px;
+    }
+
+    .member-photo{
+        width:90px;
+        height:90px;
+    }
+
+    .member h3{
+        font-size:14px;
+    }
+
+    .member p{
+        font-size:11px;
     }
 
     .gallery-grid{
@@ -631,14 +687,18 @@ footer span{
         align-items:flex-start;
     }
 }
+
 </style>
 </head>
 
+
 <body>
+
 
 <!-- HEADER -->
 
 <header>
+
 <div class="navbar">
 
     <div class="logo">
@@ -654,7 +714,9 @@ footer span{
 
     </div>
 
+
     <div class="menu" onclick="toggleMenu()">☰</div>
+
 
     <nav id="nav">
 
@@ -670,7 +732,9 @@ footer span{
     </nav>
 
 </div>
+
 </header>
+
 
 
 <!-- HERO -->
@@ -710,6 +774,7 @@ footer span{
 </section>
 
 
+
 <!-- ABOUT -->
 
 <section class="about" id="about">
@@ -717,13 +782,18 @@ footer span{
 <div class="container">
 
 <div class="title">
+
     <span>ABOUT US</span>
+
     <h2>തലയാട് യൂണിറ്റ്</h2>
+
     <p>
         നന്മയുടെയും അറിവിന്റെയും സേവനത്തിന്റെയും വഴിയിൽ
         വിദ്യാർത്ഥികളെ ഒന്നിപ്പിക്കുന്ന കൂട്ടായ്മ.
     </p>
+
 </div>
+
 
 <div class="about-grid">
 
@@ -750,7 +820,9 @@ footer span{
 </div>
 
 </div>
+
 </section>
+
 
 
 <!-- NEWS -->
@@ -760,66 +832,94 @@ footer span{
 <div class="container">
 
 <div class="title">
+
     <span>LATEST UPDATES</span>
+
     <h2>പുതിയ അറിയിപ്പുകൾ</h2>
+
 </div>
+
 
 <div class="news-grid">
 
-    <div class="news-card">
 
-        <div class="news-img">
-            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80">
-        </div>
+<div class="news-card">
 
-        <div class="news-content">
-            <small>Latest</small>
-            <h3>യൂണിറ്റ് സംഗമം</h3>
-            <p>
-                വിദ്യാർത്ഥികൾക്കായി പ്രത്യേക യൂണിറ്റ് സംഗമം.
-            </p>
-        </div>
+    <div class="news-img">
+
+        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80">
 
     </div>
 
+    <div class="news-content">
 
-    <div class="news-card">
+        <small>Latest</small>
 
-        <div class="news-img">
-            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80">
-        </div>
+        <h3>യൂണിറ്റ് സംഗമം</h3>
 
-        <div class="news-content">
-            <small>Announcement</small>
-            <h3>വിദ്യാർത്ഥി പ്രവർത്തനം</h3>
-            <p>
-                പുതിയ പ്രവർത്തനങ്ങളുടെ വിവരങ്ങൾ ഇവിടെ ലഭിക്കും.
-            </p>
-        </div>
-
-    </div>
-
-
-    <div class="news-card">
-
-        <div class="news-img">
-            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=80">
-        </div>
-
-        <div class="news-content">
-            <small>Activity</small>
-            <h3>സേവന പ്രവർത്തനം</h3>
-            <p>
-                സമൂഹ സേവന പ്രവർത്തനങ്ങളിൽ യൂണിറ്റ് സജീവം.
-            </p>
-        </div>
+        <p>
+            വിദ്യാർത്ഥികൾക്കായി പ്രത്യേക യൂണിറ്റ് സംഗമം.
+        </p>
 
     </div>
 
 </div>
 
+
+
+<div class="news-card">
+
+    <div class="news-img">
+
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80">
+
+    </div>
+
+    <div class="news-content">
+
+        <small>Announcement</small>
+
+        <h3>വിദ്യാർത്ഥി പ്രവർത്തനം</h3>
+
+        <p>
+            പുതിയ പ്രവർത്തനങ്ങളുടെ വിവരങ്ങൾ ഇവിടെ ലഭിക്കും.
+        </p>
+
+    </div>
+
 </div>
+
+
+
+<div class="news-card">
+
+    <div class="news-img">
+
+        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=80">
+
+    </div>
+
+    <div class="news-content">
+
+        <small>Activity</small>
+
+        <h3>സേവന പ്രവർത്തനം</h3>
+
+        <p>
+            സമൂഹ സേവന പ്രവർത്തനങ്ങളിൽ യൂണിറ്റ് സജീവം.
+        </p>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
+
 
 
 <!-- ACTIVITIES -->
@@ -829,65 +929,107 @@ footer span{
 <div class="container">
 
 <div class="title">
+
     <span>OUR ACTIVITIES</span>
+
     <h2>പ്രവർത്തനങ്ങൾ</h2>
+
 </div>
+
 
 <div class="activity-grid">
 
-    <div class="activity">
-        <div class="activity-icon">📚</div>
-        <h3>വിദ്യാഭ്യാസം</h3>
-        <p>
-            വിദ്യാർത്ഥികളുടെ പഠന നിലവാരം മെച്ചപ്പെടുത്തുന്നതിനുള്ള
-            വിവിധ പരിപാടികൾ.
-        </p>
-    </div>
 
-    <div class="activity">
-        <div class="activity-icon">🤝</div>
-        <h3>സാമൂഹ്യ സേവനം</h3>
-        <p>
-            സമൂഹത്തിന്റെ ആവശ്യങ്ങളിൽ സഹായവും സേവനവും.
-        </p>
-    </div>
+<div class="activity">
 
-    <div class="activity">
-        <div class="activity-icon">🎓</div>
-        <h3>വിദ്യാർത്ഥി കൂട്ടായ്മ</h3>
-        <p>
-            വിദ്യാർത്ഥികളെ ഒരുമിപ്പിച്ച് നേതൃത്വ ശേഷി വളർത്തുന്നു.
-        </p>
-    </div>
+    <div class="activity-icon">📚</div>
 
-    <div class="activity">
-        <div class="activity-icon">🎨</div>
-        <h3>കലാ സാംസ്കാരികം</h3>
-        <p>
-            കലാ-സാഹിത്യ കഴിവുകൾ പ്രോത്സാഹിപ്പിക്കുന്നു.
-        </p>
-    </div>
+    <h3>വിദ്യാഭ്യാസം</h3>
 
-    <div class="activity">
-        <div class="activity-icon">🕌</div>
-        <h3>ധാർമ്മിക പ്രവർത്തനം</h3>
-        <p>
-            ധാർമ്മിക മൂല്യങ്ങളും നല്ല ജീവിത രീതികളും വളർത്തുന്നു.
-        </p>
-    </div>
+    <p>
+        വിദ്യാർത്ഥികളുടെ പഠന നിലവാരം മെച്ചപ്പെടുത്തുന്നതിനുള്ള
+        വിവിധ പരിപാടികൾ.
+    </p>
 
-    <div class="activity">
-        <div class="activity-icon">🌱</div>
-        <h3>യുവജന പ്രവർത്തനം</h3>
-        <p>
-            യുവാക്കളുടെ കഴിവുകളും നേതൃത്വ ശേഷിയും വികസിപ്പിക്കുന്നു.
-        </p>
-    </div>
+</div>
+
+
+
+<div class="activity">
+
+    <div class="activity-icon">🤝</div>
+
+    <h3>സാമൂഹ്യ സേവനം</h3>
+
+    <p>
+        സമൂഹത്തിന്റെ ആവശ്യങ്ങളിൽ സഹായവും സേവനവും.
+    </p>
+
+</div>
+
+
+
+<div class="activity">
+
+    <div class="activity-icon">🎓</div>
+
+    <h3>വിദ്യാർത്ഥി കൂട്ടായ്മ</h3>
+
+    <p>
+        വിദ്യാർത്ഥികളെ ഒരുമിപ്പിച്ച് നേതൃത്വ ശേഷി വളർത്തുന്നു.
+    </p>
+
+</div>
+
+
+
+<div class="activity">
+
+    <div class="activity-icon">🎨</div>
+
+    <h3>കലാ സാംസ്കാരികം</h3>
+
+    <p>
+        കലാ-സാഹിത്യ കഴിവുകൾ പ്രോത്സാഹിപ്പിക്കുന്നു.
+    </p>
+
+</div>
+
+
+
+<div class="activity">
+
+    <div class="activity-icon">🕌</div>
+
+    <h3>ധാർമ്മിക പ്രവർത്തനം</h3>
+
+    <p>
+        ധാർമ്മിക മൂല്യങ്ങളും നല്ല ജീവിത രീതികളും വളർത്തുന്നു.
+    </p>
+
+</div>
+
+
+
+<div class="activity">
+
+    <div class="activity-icon">🌱</div>
+
+    <h3>യുവജന പ്രവർത്തനം</h3>
+
+    <p>
+        യുവാക്കളുടെ കഴിവുകളും നേതൃത്വ ശേഷിയും വികസിപ്പിക്കുന്നു.
+    </p>
+
+</div>
+
 
 </div>
 
 </div>
+
 </section>
+
 
 
 <!-- EVENTS -->
@@ -897,99 +1039,536 @@ footer span{
 <div class="container">
 
 <div class="title">
+
     <span>UPCOMING EVENTS</span>
+
     <h2>വരാനിരിക്കുന്ന പരിപാടികൾ</h2>
+
 </div>
+
 
 <div class="event">
 
     <div class="date">
+
         <strong>01</strong>
         <small>OCT</small>
+
     </div>
 
     <div>
+
         <h3>യൂണിറ്റ് മീറ്റിംഗ്</h3>
+
         <p>
             സ്ഥലം: തലയാട് | സമയം: വൈകുന്നേരം 7:00
         </p>
+
     </div>
 
 </div>
+
 
 
 <div class="event">
 
     <div class="date">
+
         <strong>15</strong>
         <small>OCT</small>
+
     </div>
 
     <div>
+
         <h3>വിദ്യാർത്ഥി സംഗമം</h3>
+
         <p>
             വിദ്യാർത്ഥികൾക്കായുള്ള പ്രത്യേക പരിപാടി
         </p>
+
     </div>
 
 </div>
 
+
 </div>
+
 </section>
 
 
-<!-- COMMITTEE -->
+
+<!-- ============================= -->
+<!-- EXECUTIVE COMMITTEE -->
+<!-- ============================= -->
 
 <section id="committee">
 
 <div class="container">
 
 <div class="title">
+
     <span>EXECUTIVE COMMITTEE</span>
+
     <h2>എക്സിക്യൂട്ടീവ് കമ്മിറ്റി</h2>
+
     <p>2026 – 2027</p>
+
 </div>
+
+
+
+<!-- CORE COMMITTEE -->
+
+<h3 class="committee-category">
+    Core Committee
+</h3>
+
 
 <div class="committee-grid">
 
-    <div class="member">
-        <div class="member-photo">
-            <img src="abdurafeeh.jpg" class="member-photo" alt="AbduRafeeh">
-        </div>
-        <h3>ABDU RAFEEH </h3>
-        <p>President</p>
-    </div>
 
-    <div class="member">
-        <div class="member-photo">
-            <img src="riyaskk.jpg" class="member-photo" alt="riyaskk">
-        </div>
-        <h3>RIYASS KK</h3>
-        <p>General Secretary</p>
-    </div>
+<!-- President -->
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="abdurafeeh.jpg"
+             alt="R. Abdu Rafeeh">
 
     </div>
 
-    <div class="member">
-        <div class="member-photo">
-            <img src="https://via.placeholder.com/300">
-        </div>
-        <h3>പേര് ഇവിടെ</h3>
-        <p>SHIHABUDHEEN</p>
+    <h3>R. Abdu Rafeeh</h3>
+
+    <p>President</p>
+
+</div>
+
+
+
+<!-- General Secretary -->
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="riyaskk.jpg"
+             alt="Riyas KK">
+
     </div>
 
-    <div class="member">
-        <div class="member-photo">
-            <img src="https://via.placeholder.com/300">
-        </div>
-        <h3>പേര് ഇവിടെ</h3>
-        <p>Secretary</p>
+    <h3>Riyas KK</h3>
+
+    <p>General Secretary</p>
+
+</div>
+
+
+
+<!-- Secretary -->
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="rajeeh.jpg"
+             alt="Rajeeh">
+
     </div>
+
+    <h3>Rajeeh</h3>
+
+    <p>Secretary</p>
+
+</div>
+
+
+
+<!-- Working Secretary -->
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="shadil.jpg"
+             alt="Shadil">
+
+    </div>
+
+    <h3>Shadil</h3>
+
+    <p>Working Secretary</p>
+
+</div>
+
+
+
+<!-- Treasurer -->
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="shihabudheen.jpg"
+             alt="Shihabudheen">
+
+    </div>
+
+    <h3>Shihabudheen</h3>
+
+    <p>Treasurer</p>
+
+</div>
+
+
+</div>
+
+
+
+<!-- VICE PRESIDENTS -->
+
+<h3 class="committee-category">
+    Vice Presidents
+</h3>
+
+
+<div class="committee-grid">
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="vice-president-1.jpg"
+             alt="Sinan KM">
+
+    </div>
+
+    <h3>Sinan KM</h3>
+
+    <p>Vice President</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="vice-president-2.jpg"
+             alt="Thameem">
+
+    </div>
+
+    <h3>Thameem</h3>
+
+    <p>Vice President</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="vice-president-3.jpg"
+             alt="Sidan">
+
+    </div>
+
+    <h3>Sidan</h3>
+
+    <p>Vice President</p>
+
+</div>
+
+
+</div>
+
+
+
+<!-- JOINT SECRETARIES -->
+
+<h3 class="committee-category">
+    Joint Secretaries
+</h3>
+
+
+<div class="committee-grid">
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="joint-secretary-1.jpg"
+             alt="Joint Secretary 1">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Joint Secretary</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="joint-secretary-2.jpg"
+             alt="Joint Secretary 2">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Joint Secretary</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="joint-secretary-3.jpg"
+             alt="Joint Secretary 3">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Joint Secretary</p>
+
+</div>
+
+
+</div>
+
+
+
+<!-- COUNCILLORS -->
+
+<h3 class="committee-category">
+    Councillors
+</h3>
+
+
+<div class="committee-grid">
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="councillor-1.jpg"
+             alt="Councillor 1">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Councillor</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="councillor-2.jpg"
+             alt="Councillor 2">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Councillor</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="councillor-3.jpg"
+             alt="Councillor 3">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Councillor</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="councillor-4.jpg"
+             alt="Councillor 4">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Councillor</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="councillor-5.jpg"
+             alt="Councillor 5">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Councillor</p>
+
+</div>
+
+
+</div>
+
+
+
+<!-- MEMBERS -->
+
+<h3 class="committee-category">
+    Members
+</h3>
+
+
+<div class="committee-grid">
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="member-1.jpg"
+             alt="Member 1">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Member</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="member-2.jpg"
+             alt="Member 2">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Member</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="member-3.jpg"
+             alt="Member 3">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Member</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="member-4.jpg"
+             alt="Member 4">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Member</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="member-5.jpg"
+             alt="Member 5">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Member</p>
+
+</div>
+
+
+
+<div class="member">
+
+    <div class="member-photo">
+
+        <img src="member-6.jpg"
+             alt="Member 6">
+
+    </div>
+
+    <h3>Name</h3>
+
+    <p>Member</p>
+
+</div>
+
 
 </div>
 
 </div>
+
 </section>
+
 
 
 <!-- GALLERY -->
@@ -999,9 +1578,13 @@ footer span{
 <div class="container">
 
 <div class="title">
+
     <span>PHOTO GALLERY</span>
+
     <h2>ഫോട്ടോ ഗാലറി</h2>
+
 </div>
+
 
 <div class="gallery-grid">
 
@@ -1020,7 +1603,9 @@ footer span{
 </div>
 
 </div>
+
 </section>
+
 
 
 <!-- VIDEO -->
@@ -1030,13 +1615,15 @@ footer span{
 <div class="container">
 
 <div class="title">
+
     <span>VIDEOS</span>
+
     <h2>ഞങ്ങളുടെ വീഡിയോകൾ</h2>
+
 </div>
 
-<div class="video-box">
 
-    <!-- Replace YOUR_VIDEO_ID -->
+<div class="video-box">
 
     <iframe
         src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
@@ -1046,7 +1633,9 @@ footer span{
 </div>
 
 </div>
+
 </section>
+
 
 
 <!-- DOWNLOADS -->
@@ -1056,34 +1645,64 @@ footer span{
 <div class="container">
 
 <div class="title">
+
     <span>DOWNLOADS</span>
+
     <h2>ഡൗൺലോഡുകൾ</h2>
+
 </div>
+
 
 <div class="download-grid">
 
-    <div class="download">
-        <h3>📄 Unit Notice</h3>
-        <p>യൂണിറ്റ് അറിയിപ്പ്</p>
-        <a href="#" download>Download →</a>
-    </div>
 
-    <div class="download">
-        <h3>📄 Committee List</h3>
-        <p>2026–27 കമ്മിറ്റി</p>
-        <a href="#" download>Download →</a>
-    </div>
+<div class="download">
 
-    <div class="download">
-        <h3>📄 Application</h3>
-        <p>അപേക്ഷാ ഫോം</p>
-        <a href="#" download>Download →</a>
-    </div>
+    <h3>📄 Unit Notice</h3>
+
+    <p>യൂണിറ്റ് അറിയിപ്പ്</p>
+
+    <a href="#" download>
+        Download →
+    </a>
+
+</div>
+
+
+
+<div class="download">
+
+    <h3>📄 Committee List</h3>
+
+    <p>2026–27 കമ്മിറ്റി</p>
+
+    <a href="#" download>
+        Download →
+    </a>
+
+</div>
+
+
+
+<div class="download">
+
+    <h3>📄 Application</h3>
+
+    <p>അപേക്ഷാ ഫോം</p>
+
+    <a href="#" download>
+        Download →
+    </a>
+
+</div>
+
 
 </div>
 
 </div>
+
 </section>
+
 
 
 <!-- CONTACT -->
@@ -1093,42 +1712,80 @@ footer span{
 <div class="container">
 
 <div class="title">
+
     <span>CONTACT US</span>
+
     <h2>ബന്ധപ്പെടുക</h2>
+
 </div>
+
 
 <div class="contact-grid">
 
-    <div class="contact-box">
-        <div class="icon">📍</div>
-        <h3>Address</h3>
-        <p>Thalayad, Kerala</p>
-    </div>
 
-    <div class="contact-box">
-        <div class="icon">📞</div>
-        <h3>Phone</h3>
-        <p>
-  <a href="tel:+919048130547" style="color: inherit; text-decoration: none;">
-    +91 9048130547
-  </a>
-</p>
-    </div>
+<div class="contact-box">
 
-    <div class="contact-box">
-        <div class="icon">✉️</div>
-        <h3>Email</h3>
-        <p>
-  <a href="mailto:skssfthalayad857@gmail.com" style="color: inherit; text-decoration: none;">
-    skssfthalayad857@gmail.com
-  </a>
-</p>
-    </div>
+    <div class="icon">📍</div>
+
+    <h3>Address</h3>
+
+    <p>
+        Thalayad, Kerala
+    </p>
+
+</div>
+
+
+
+<div class="contact-box">
+
+    <div class="icon">📞</div>
+
+    <h3>Phone</h3>
+
+    <p>
+
+        <a
+        href="tel:+919048130547"
+        style="color:inherit;text-decoration:none;">
+
+            +91 9048130547
+
+        </a>
+
+    </p>
+
+</div>
+
+
+
+<div class="contact-box">
+
+    <div class="icon">✉️</div>
+
+    <h3>Email</h3>
+
+    <p>
+
+        <a
+        href="mailto:skssfthalayad857@gmail.com"
+        style="color:inherit;text-decoration:none;">
+
+            skssfthalayad857@gmail.com
+
+        </a>
+
+    </p>
+
+</div>
+
 
 </div>
 
 </div>
+
 </section>
+
 
 
 <!-- WHATSAPP -->
@@ -1136,9 +1793,13 @@ footer span{
 <a
 class="whatsapp"
 href="https://wa.me/919048130547"
-target="_blank">
+target="_blank"
+aria-label="WhatsApp">
+
 💬
+
 </a>
+
 
 
 <!-- FOOTER -->
@@ -1146,15 +1807,22 @@ target="_blank">
 <footer>
 
 <p>
-© 2026 <span>SKSSF Thalayad Unit</span>.
+
+© 2026
+<span>SKSSF Thalayad Unit</span>.
 All Rights Reserved.
+
 </p>
 
 <p>
-Designed by <span>SR CREATIVE</span>
+
+Designed by
+<span>SR CREATIVE</span>
+
 </p>
 
 </footer>
+
 
 
 <script>
@@ -1168,7 +1836,10 @@ function toggleMenu(){
 
 }
 
-document.querySelectorAll("nav a").forEach(function(link){
+
+document
+.querySelectorAll("nav a")
+.forEach(function(link){
 
     link.addEventListener("click",function(){
 
@@ -1182,6 +1853,7 @@ document.querySelectorAll("nav a").forEach(function(link){
 });
 
 </script>
+
 
 </body>
 </html>
